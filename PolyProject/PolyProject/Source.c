@@ -45,11 +45,11 @@ main1:;
 			scanf_s("%d", &cho2);
 			switch (cho2)
 			{
-			case 1:; double deg, ans1;
+			case 1:; double deg, ans11;
 					printf("\nEnter the Degrees to be Converted: ");
 					scanf_s("%lf", &deg);
-					ans1 = DegRad(deg);
-					printf("lf deg is equal to %.5lf rad.", deg, ans1);
+					ans11 = DegRad(deg);
+					printf("%lf deg is equal to %.5lf rad.", deg, ans11);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -63,11 +63,11 @@ main1:;
 					}
 					break;
 
-			case 2:; double rad, ans2;
+			case 2:; double rad, ans12;
 					printf("\nEnter the Radians to Converted: ");
 					scanf_s("%lf", &rad);
-					ans2 = RadDeg(rad);
-					printf("\n%lf radians is equal to %.4lf degrees.", rad, ans2);
+					ans12 = RadDeg(rad);
+					printf("\n%lf radians is equal to %.4lf degrees.", rad, ans12);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -81,11 +81,11 @@ main1:;
 					}
 					break;
 
-			case 3:; double cossb, cossc, cosstheta, ans3;
+			case 3:; double cossb, cossc, cosstheta, ans13;
 					printf("\nEnter the side b, c and theta in the stated order (only spaces no commas): ");
 					scanf_s("%lf %lf %lf", &cossb, &cossc, &cosstheta);
-					ans3 = CosS(cossb, cossc, cosstheta);
-					printf("\nYour missing side is %.4lf (units)", ans3);
+					ans13 = CosS(cossb, cossc, cosstheta);
+					printf("\nYour missing side is %.4lf (units)", ans13);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -99,12 +99,12 @@ main1:;
 					}
 					break;
 
-			case 4:; double cosaa, cosab, cosac, ans4;
+			case 4:; double cosaa, cosab, cosac, ans14;
 					printf("\nPlease note that a and b are the included sides.");
 					printf("\nEnter the sides a, b and c (only spaces no commas): ");
 					scanf_s("%lf %lf %lf", &cosaa, &cosab, &cosac);
-					ans4 = CosA(cosaa, cosab, cosac);
-					printf("\nYour Angle is %.4lf deg,", ans4);
+					ans14 = CosA(cosaa, cosab, cosac);
+					printf("\nYour Angle is %.4lf deg,", ans14);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -118,11 +118,11 @@ main1:;
 					}
 					break;
 
-			case 5:; double sinsa, sinssina, sinssinb, ans5;
+			case 5:; double sinsa, sinssina, sinssinb, ans15;
 					printf("\nEnter Side A, Sin(A) and Sin(B) (Enter the Angles not the sin vaules): ");
 					scanf_s("%lf %lf %lf", &sinsa, &sinssina, &sinssinb);
-					ans5 = SinS(sinsa, sinssina, sinssinb);
-					printf("\nYour side is %.4lf (units)", ans5);
+					ans15 = SinS(sinsa, sinssina, sinssinb);
+					printf("\nYour side is %.4lf (units)", ans15);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -136,11 +136,11 @@ main1:;
 					}
 					break;
 
-			case 6:; double sinasina, sinaa, sinab, ans6;
+			case 6:; double sinasina, sinaa, sinab, ans16;
 					printf("\nEnter Sin(A), side A and side B (Enter the angles not the sin value): ");
 					scanf_s("%lf %lf %lf", &sinasina, &sinaa, &sinab);
-					ans6 = SinA(sinasina, sinaa, sinab);
-					printf("\nYour Angle is %.4lf deg", ans6);
+					ans16 = SinA(sinasina, sinaa, sinab);
+					printf("\nYour Angle is %.4lf deg", ans16);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -166,5 +166,36 @@ main1:;
 					 goto trig1;
 			}
 			break;
+
+	case 2:; int cho3;
+			system("cls");
+			printf("Plane Geometry Formulas\n");
+			printf("=========================\n");
+			printf("[1] Find a MidPoint\n");
+			printf("[2] Find the Distance between two points.\n");
+			printf("\nChoice: ");
+			scanf_s("%d", &cho3);
+				switch (cho3)
+				{
+				case 1:; float x1, y1, x2, y2;
+						printf("\nEnter the two points x1 y1 x2 y2: ");
+						scanf_s("%f %f %f %f", &x1, &y1, &x2, &y2);
+						MidPt(x1, y1, x2, y2);
+						backexit();
+						if (exitchoice == 1)
+						{
+							system("cls");
+							goto main1;
+						}
+						else if (exitchoice == 2)
+						{
+							printf("\nBye-Bye!\n");
+							system("pause");
+						}
+						break;
+				case 2:;
+
+
+				}
 	}
 }
