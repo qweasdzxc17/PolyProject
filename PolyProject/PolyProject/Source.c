@@ -30,7 +30,7 @@ main1:;
 	{
 	case 1:;
 		trig1:
-			system("cls");
+		system("cls");
 			int cho2;
 			printf("Trigonometry Formulas\n");
 			printf("================================\n");
@@ -59,7 +59,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -77,7 +79,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -95,7 +99,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -114,7 +120,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -132,7 +140,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -150,7 +160,9 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						system("pause");
+						printf("Press Enter to Exit.\n");
+						getchar();
+						getchar();
 					}
 					break;
 
@@ -177,10 +189,10 @@ main1:;
 			scanf_s("%d", &cho3);
 				switch (cho3)
 				{
-				case 1:; float x1, y1, x2, y2;
+				case 1:; float mpx1, mpy1, mpx2, mpy2;
 						printf("\nEnter the two points x1 y1 x2 y2: ");
-						scanf_s("%f %f %f %f", &x1, &y1, &x2, &y2);
-						MidPt(x1, y1, x2, y2);
+						scanf_s("%f %f %f %f", &mpx1, &mpy1, &mpx2, &mpy2);
+						MidPt(mpx1, mpy1, mpx2, mpy2);
 						backexit();
 						if (exitchoice == 1)
 						{
@@ -190,10 +202,31 @@ main1:;
 						else if (exitchoice == 2)
 						{
 							printf("\nBye-Bye!\n");
-							system("pause");
+							printf("Press Enter to Exit.\n");
+							getchar();
+							getchar();
 						}
 						break;
-				case 2:;
+
+				case 2:; double dpx1, dpy1, dpx2, dpy2, ans22;
+						 printf("\nEnter the two points x1 y1 x2 y2: ");
+						 scanf_s("%lf %lf %lf %lf", &dpx1, &dpy1, &dpx2, &dpy2);
+						 ans22 = DistPt(dpx1, dpy1, dpx2, dpy2);
+						 printf("\nThe Distance Between the Two points is %.4lf", ans22);
+						 backexit();
+						 if (exitchoice == 1)
+						 {
+							 system("cls");
+							 goto main1;
+						 }
+						 else if (exitchoice == 2)
+						 {
+							 printf("\nBye-Bye!\n");
+							 printf("Press Enter to Exit.\n");
+							 getchar();
+							 getchar();
+						 }
+						 break;
 
 
 				}
