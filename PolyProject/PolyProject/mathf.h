@@ -1,45 +1,44 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 /*Trigo Formulas*/
-double DegRad(double deg1)
+double DegRad(double deg1) //Confirmed
 {
 	double rad1;
-	rad1 = deg1 * M_PI / 180;
+	rad1 = deg1 * (M_PI / 180);
 	return rad1;
 }
 
-double RadDeg(double rad2)
+double RadDeg(double rad2) //Confirmed
 {
 	double deg2;
-	deg2 = rad2 * 180 / M_PI;
+	deg2 = rad2 * (180 / M_PI);
 	return deg2;
 }
 
-double CosS(double b, double c, double theta)
+double CosS(double b, double c, double theta) //Confirmed
 {
 	double a;
-	a = sqrt(pow(b, 2) + pow(c, 2) - (2 * b * c) * RadDeg(cos(theta)));
+	a = sqrt(pow(b, 2) + pow(c, 2) - (2 * b * c) * cos(DegRad(theta)));
 	return a;
 }
 
-double CosA(double a, double b, double c)
+double CosA(double a, double b, double c) //Confirmed
 {
 	double theta;
-	theta = RadDeg(acos((pow(b, 2) + pow(c, 2) - pow(a, 2)) / (2 * b * c)));
+	theta = RadDeg(acos(((pow(a, 2) + pow(b, 2)) - pow(c, 2)) / (2 * a * b)));
 	return theta;
 }
 
-double SinA(double sna, double a, double b)
+double SinA(double sna, double a, double b) //Confirmed
 {
-	double ab, sna1;
-	sna1 = sin(sna * (M_PI / 180.0));
-	ab = asin((sna1 / a) * b);
+	double ab;
+	ab = RadDeg(asin((sin(DegRad(sna)) / a) * b));
 	return ab;
 }
 double SinS(double a, double sna, double snb)
 {
 	double b;
-	b = (a / DegRad(sna)) * DegRad(snb);
+	b = (a / sin(DegRad(sna))) * sin(DegRad(snb));
 	return b;
 }
 /*Plane Geo Formulas*/

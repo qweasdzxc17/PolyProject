@@ -49,7 +49,7 @@ main1:;
 					printf("\nEnter the Degrees to be Converted: ");
 					scanf_s("%lf", &deg);
 					ans1 = DegRad(deg);
-					printf("%.2lf deg is equal to %lf rad.", deg, ans1);
+					printf("lf deg is equal to %.5lf rad.", deg, ans1);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -67,7 +67,7 @@ main1:;
 					printf("\nEnter the Radians to Converted: ");
 					scanf_s("%lf", &rad);
 					ans2 = RadDeg(rad);
-					printf("\n.2%lf radians is equal to %lf degrees.", rad, ans2);
+					printf("\n%lf radians is equal to %.4lf degrees.", rad, ans2);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -100,10 +100,11 @@ main1:;
 					break;
 
 			case 4:; double cosaa, cosab, cosac, ans4;
-					printf("\nEnter the sides a, b and c as with respect to the formula (only spaces no commas): ");
+					printf("\nPlease note that a and b are the included sides.");
+					printf("\nEnter the sides a, b and c (only spaces no commas): ");
 					scanf_s("%lf %lf %lf", &cosaa, &cosab, &cosac);
 					ans4 = CosA(cosaa, cosab, cosac);
-					printf("\nYour Angle is %.4lf deg,", &ans4);
+					printf("\nYour Angle is %.4lf deg,", ans4);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -121,7 +122,7 @@ main1:;
 					printf("\nEnter Side A, Sin(A) and Sin(B) (Enter the Angles not the sin vaules): ");
 					scanf_s("%lf %lf %lf", &sinsa, &sinssina, &sinssinb);
 					ans5 = SinS(sinsa, sinssina, sinssinb);
-					printf("\nYour side is %.4lf", ans5);
+					printf("\nYour side is %.4lf (units)", ans5);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -139,7 +140,7 @@ main1:;
 					printf("\nEnter Sin(A), side A and side B (Enter the angles not the sin value): ");
 					scanf_s("%lf %lf %lf", &sinasina, &sinaa, &sinab);
 					ans6 = SinA(sinasina, sinaa, sinab);
-					printf("\nYour Angle is %.4lf", ans6);
+					printf("\nYour Angle is %.4lf deg", ans6);
 					backexit();
 					if (exitchoice == 1)
 					{
@@ -152,11 +153,13 @@ main1:;
 						system("pause");
 					}
 					break;
+
 			case 7: printf("\nGoing back to main.\n\n");
 					system("pause");
 					system("cls");
 					goto main1;
 					break;
+
 			default: printf("\nINVAILD CHOICE!\n");
 					 system("pause");
 					 system("cls");
