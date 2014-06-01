@@ -251,7 +251,7 @@ main1:;
 						 }
 						 break;
 				
-				case 4: printf("You can only select 3 and 4 points.");
+				case 4: printf("\nYou can only select 3 and 4 points.\n");
 						AreaPF();
 						backexit();
 						if (exitchoice == 1)
