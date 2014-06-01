@@ -29,8 +29,8 @@ main1:;
 	switch (cho1)
 	{
 	case 1:;
-		trig1:
-		system("cls");
+			trig1:
+			system("cls");
 			int cho2;
 			printf("Trigonometry Formulas\n");
 			printf("================================\n");
@@ -179,12 +179,17 @@ main1:;
 			}
 			break;
 
-	case 2:; int cho3;
+	case 2:;
+			plngeo1:;
+			int cho3;
 			system("cls");
 			printf("Plane Geometry Formulas\n");
 			printf("=========================\n");
 			printf("[1] Find a MidPoint\n");
 			printf("[2] Find the Distance between two points.\n");
+			printf("[3] Find the Gradient of two points.\n");
+			printf("[4] Area of plane figures.\n");
+			printf("[5] Go Back\n");
 			printf("\nChoice: ");
 			scanf_s("%d", &cho3);
 				switch (cho3)
@@ -227,7 +232,52 @@ main1:;
 							 getchar();
 						 }
 						 break;
+				case 3:; double gpx1, gpy1, gpx2, gpy2, ans23;
+						 printf("\nEnter the two points x1 y1 x2 y2: ");
+						 scanf_s("%lf %lf %lf %lf", &gpx1, &gpy1, &gpx2, &gpy2);
+						 ans23 = GradPt(gpx1, gpy1, gpx2, gpy2);
+						 backexit();
+						 if (exitchoice == 1)
+						 {
+							 system("cls");
+							 goto main1;
+						 }
+						 else if (exitchoice == 2)
+						 {
+							 printf("\nBye-Bye!\n");
+							 printf("Press Enter to Exit.\n");
+							 getchar();
+							 getchar();
+						 }
+						 break;
+				
+				case 4: printf("You can only select 3 and 4 points.");
+						AreaPF();
+						backexit();
+						if (exitchoice == 1)
+						{
+							system("cls");
+							goto main1;
+						}
+						else if (exitchoice == 2)
+						{
+							printf("\nBye-Bye!\n");
+							printf("Press Enter to Exit.\n");
+							getchar();
+							getchar();
+						}
+						break;
 
+				case 5: printf("\nGoing back to main.\n\n");
+					system("pause");
+					system("cls");
+					goto main1;
+					break;
+
+				default: printf("\nINVAILD CHOICE!\n");
+					system("pause");
+					system("cls");
+					goto plngeo1;
 
 				}
 	}
