@@ -1,5 +1,6 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
+
 /*Trigo Formulas*/
 double DegRad(double deg1) //Confirmed
 {
@@ -41,6 +42,7 @@ double SinS(double a, double sna, double snb) //Confirmed
 	b = (a / sin(DegRad(sna))) * sin(DegRad(snb));
 	return b;
 }
+
 /*Plane Geo Formulas*/
 void MidPt(float x1, float y1, float x2, float y2)
 {
@@ -64,6 +66,7 @@ double GradPt(double x1, double y1, double x2, double y2)
 	ans = (y2 - y1) / (x2 - x1);
 	return ans;
 }
+
 void AreaPF(void)
 {
 	int numpoints;

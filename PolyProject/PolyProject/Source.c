@@ -13,6 +13,13 @@ void backexit(void)
 	printf("[1] Yes   [2] No\n");
 	printf("\nChoice: ");
 	scanf_s("%d", &exitchoice);
+	if (exitchoice != 1 && exitchoice != 2)
+	{
+		printf("INVALID CHOICE!.\n");
+		printf("Press Enter to exit.\n");
+		getchar();
+		getchar();
+	}
 }
 
 void cpause(void)
@@ -257,7 +264,7 @@ main1:;
 						break;
 
 				case 5: printf("\nGoing back to main.\n\n");
-					cpuase();
+					cpause();
 					system("cls");
 					goto main1;
 					break;
