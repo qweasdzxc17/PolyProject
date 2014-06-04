@@ -74,17 +74,19 @@ void AreaPF(void)
 	scanf_s("%d", &numpoints);
 	switch (numpoints)
 	{
-	case 3:; double AreaPF1x1, AreaPF1y1, AreaPF1x2, AreaPF1y2, AreaPF1x3, AreaPF1y3, AreaPF1ANS;
+	case 3:; 
+		double AreaPF1[3][3], AreaPF1ANS;
 		printf("Enter the 3 points: ");
-		scanf_s("%lf %lf %lf %lf %lf %lf", &AreaPF1x1, &AreaPF1y1, &AreaPF1x2, &AreaPF1y2, &AreaPF1x3, &AreaPF1y3);
-		AreaPF1ANS = 0.5 * abs((AreaPF1x1 * AreaPF1y2) + (AreaPF1x2 * AreaPF1y3) + (AreaPF1x3 * AreaPF1y1) - (AreaPF1x2 * AreaPF1y1) - (AreaPF1x3 * AreaPF1y2) - (AreaPF1x1 * AreaPF1y3));
+		scanf_s("%lf %lf %lf %lf %lf %lf", &AreaPF1[0][0], &AreaPF1[1][0], &AreaPF1[0][1], &AreaPF1[1][1], &AreaPF1[0][2], &AreaPF1[1][2]);
+		AreaPF1ANS = 0.5 * abs((AreaPF1[0][0] * AreaPF1[1][1]) + (AreaPF1[0][1] * AreaPF1[1][2]) + (AreaPF1[0][2] * AreaPF1[1][0]) - (AreaPF1[0][1] * AreaPF1[1][0]) - (AreaPF1[0][2] * AreaPF1[1][1]) - (AreaPF1[0][0] * AreaPF1[1][2]));
 		printf("\nThe area of the figure is %.5lf", AreaPF1ANS);
 		break;
 
-	case 4:; double AreaPF2x1, AreaPF2y1, AreaPF2x2, AreaPF2y2, AreaPF2x3, AreaPF2y3, AreaPF2x4, AreaPF2y4, AreaPF2ANS;
+	case 4:; 
+		double AreaPF2[4][4], AreaPF2ANS;
 		printf("Enter the 4 points: ");
-		scanf_s("%lf %lf %lf %lf %lf %lf %lf %lf", &AreaPF2x1, &AreaPF2y1, &AreaPF2x2, &AreaPF2y2, &AreaPF2x3, &AreaPF2y3, &AreaPF2x4, &AreaPF2y4);
-		AreaPF2ANS = 0.5 * abs((AreaPF2x1 * AreaPF2y2) + (AreaPF2x2 * AreaPF2y3) + (AreaPF2x3 * AreaPF2y4) + (AreaPF2x4 * AreaPF2y1) - (AreaPF2x2 * AreaPF2y1) - (AreaPF2x3 * AreaPF2y2) - (AreaPF2x4 * AreaPF2y3) - (AreaPF2x1 * AreaPF2y4));
+		scanf_s("%lf %lf %lf %lf %lf %lf %lf %lf", &AreaPF2[0][0], &AreaPF2[1][0], &AreaPF2[0][1], &AreaPF2[1][1], &AreaPF2[0][2], &AreaPF2[1][2], &AreaPF2[0][3], &AreaPF2[1][3]);
+		AreaPF2ANS = 0.5 * abs((AreaPF2[0][0] * AreaPF2[1][1]) + (AreaPF2[0][1] * AreaPF2[1][2]) + (AreaPF2[0][2] * AreaPF2[1][3]) + (AreaPF2[0][3] * AreaPF2[1][0]) - (AreaPF2[0][1] * AreaPF2[1][0]) - (AreaPF2[0][2] * AreaPF2[1][1]) - (AreaPF2[0][3] * AreaPF2[1][2]) - (AreaPF2[0][0] * AreaPF2[1][3]));
 		printf("\nThe area of the figure is %.5lf", AreaPF2ANS);
 		break;
 
