@@ -1,3 +1,11 @@
+/*  Name:  Lucas Wong                 Class: P1K1
+Filename:  source.c  ( e.g your_name.c )
+Source of your formulas: Addtional Mathematics 6th Edition
+(e.g. from textbook of electrical, mechanics, or maths)
+(e.g. from tutorial/test questions, webpage address)
+Project Description: A collection of formulas from the A maths Textbook
+*/
+
 #include <stdio.h>
 #include "mathf.h"
 #include <math.h>
