@@ -15,6 +15,13 @@ void backexit(void)
 	scanf_s("%d", &exitchoice);
 }
 
+void cpause(void)
+{
+	printf("Press Enter to continue.\n");
+	getchar();
+	getchar();
+}
+
 //Main Program
 void main(void)
 {
@@ -59,9 +66,7 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
@@ -79,9 +84,7 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
@@ -99,9 +102,7 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
@@ -120,9 +121,7 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
@@ -140,9 +139,7 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
@@ -160,20 +157,18 @@ main1:;
 					else if (exitchoice == 2)
 					{
 						printf("\nBye-Bye!\n");
-						printf("Press Enter to Exit.\n");
-						getchar();
-						getchar();
+						cpause();
 					}
 					break;
 
 			case 7: printf("\nGoing back to main.\n\n");
-					system("pause");
+					cpause();
 					system("cls");
 					goto main1;
 					break;
 
 			default: printf("\nINVAILD CHOICE!\n");
-					 system("pause");
+					 cpause();
 					 system("cls");
 					 goto trig1;
 			}
@@ -207,9 +202,7 @@ main1:;
 						else if (exitchoice == 2)
 						{
 							printf("\nBye-Bye!\n");
-							printf("Press Enter to Exit.\n");
-							getchar();
-							getchar();
+							cpause();
 						}
 						break;
 
@@ -227,9 +220,7 @@ main1:;
 						 else if (exitchoice == 2)
 						 {
 							 printf("\nBye-Bye!\n");
-							 printf("Press Enter to Exit.\n");
-							 getchar();
-							 getchar();
+							 cpause();
 						 }
 						 break;
 				case 3:; double gpx1, gpy1, gpx2, gpy2, ans23;
@@ -245,9 +236,7 @@ main1:;
 						 else if (exitchoice == 2)
 						 {
 							 printf("\nBye-Bye!\n");
-							 printf("Press Enter to Exit.\n");
-							 getchar();
-							 getchar();
+							 cpause();
 						 }
 						 break;
 				
@@ -263,19 +252,18 @@ main1:;
 						{
 							printf("\nBye-Bye!\n");
 							printf("Press Enter to Exit.\n");
-							getchar();
-							getchar();
+							cpause();
 						}
 						break;
 
 				case 5: printf("\nGoing back to main.\n\n");
-					system("pause");
+					cpuase();
 					system("cls");
 					goto main1;
 					break;
 
 				default: printf("\nINVAILD CHOICE!\n");
-					system("pause");
+					cpause();
 					system("cls");
 					goto plngeo1;
 
