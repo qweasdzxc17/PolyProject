@@ -1,8 +1,6 @@
 /*  Name:  Lucas Wong                 Class: P1K1
 Filename:  source.c  ( e.g your_name.c )
-Source of your formulas: Addtional Mathematics 6th Edition
-(e.g. from textbook of electrical, mechanics, or maths)
-(e.g. from tutorial/test questions, webpage address)
+Source of your formulas: Addtional Mathematics 6th Edition ShingLee
 Project Description: A collection of formulas from the A maths Textbook
 */
 
@@ -15,27 +13,8 @@ Project Description: A collection of formulas from the A maths Textbook
 int exitchoice;
 
 //Custom Functions
-void backexit(void)
-{
-	printf("\n\nWould you like to do another caculation?\n");
-	printf("[1] Yes   [2] No\n");
-	printf("\nChoice: ");
-	scanf_s("%d", &exitchoice);
-	if (exitchoice != 1 && exitchoice != 2)
-	{
-		printf("INVALID CHOICE!.\n");
-		printf("Press Enter to exit.\n");
-		getchar();
-		getchar();
-	}
-}
-
-void cpause(void)
-{
-	printf("Press Enter to continue.\n");
-	getchar();
-	getchar();
-}
+void backexit(void);
+void cpause(void);
 
 //Main Program
 void main(void)
@@ -284,4 +263,26 @@ main1:;
 
 				}
 	}
+}
+
+void backexit(void)
+{
+	printf("\n\nWould you like to do another caculation?\n");
+	printf("[1] Yes   [2] No\n");
+	printf("\nChoice: ");
+	scanf_s("%d", &exitchoice);
+	if (exitchoice != 1 && exitchoice != 2)
+	{
+		printf("INVALID CHOICE!.\n");
+		printf("Press Enter to exit.\n");
+		getchar();
+		getchar();
+	}
+}
+
+void cpause(void)
+{
+	printf("Press Enter to continue.\n");
+	getchar();
+	getchar();
 }

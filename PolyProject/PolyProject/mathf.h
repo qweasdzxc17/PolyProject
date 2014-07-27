@@ -44,7 +44,7 @@ double SinS(double a, double sna, double snb) //Confirmed
 }
 
 /*Plane Geo Formulas*/
-void MidPt(float x1, float y1, float x2, float y2)
+void MidPt(float x1, float y1, float x2, float y2) //Confirmed
 {
 	float x, y;
 	float ANS[2];
@@ -54,20 +54,20 @@ void MidPt(float x1, float y1, float x2, float y2)
 	ANS[1] = y;
 	printf("The MidPt is (%.2f, %.2f)", x, y);
 }
-double DistPt(double x1, double y1, double x2, double y2)
+double DistPt(double x1, double y1, double x2, double y2) //Confirmed
 {
 	double ans;
 	ans = (pow(x2 - x1, 2) + pow(y2 - y1, 2));
 	return ans;
 }
-double GradPt(double x1, double y1, double x2, double y2)
+double GradPt(double x1, double y1, double x2, double y2) //Confirmed
 {
 	double ans;
 	ans = (y2 - y1) / (x2 - x1);
 	return ans;
 }
 
-void AreaPF(void)
+void AreaPF(void) //Confirmed
 {
 	int numpoints;
 	printf("\nState the number of points in your figure: ");
