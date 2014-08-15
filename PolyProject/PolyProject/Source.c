@@ -1,6 +1,8 @@
 /*  Name:  Lucas Wong                 Class: P1K1			StudentID: 10158839F
+	Name:  Cornelius Tong			  Class: P1K1			StudentID: 10158723H
 Filename:  source.c  ( e.g your_name.c )
-Source of your formulas: Addtional Mathematics 6th Edition ShingLee
+Source of your formulas: Addtional Mathematics 8th Edition ShingLee
+Source of your formulas: http://valkyriecrusade.wikia.com/wiki/Archwitch
 Project Description: A collection of formulas from the A maths Textbook
 */
 
@@ -28,10 +30,20 @@ void MidPt(float x1, float y1, float x2, float y2);
 double DistPt(double x1, double y1, double x2, double y2);
 double GradPt(double x1, double y1, double x2, double y2);
 void AreaPF(void);
+void CornsProgram(void);
 
 //Main Program
 void main(void)
 {
+	printf("Select which program to operate.\n============================\n[1] Math Formulas Program\n[2] Archwitch program");
+	int mainchoice;
+	printf("\n\nChoice: ");
+	scanf_s("%d", &mainchoice);
+	if (mainchoice != 1)
+	{
+		CornsProgram();
+		exitchoice = 0;
+	}
 	while (exitchoice == 1)
 	{
 		int cho1 = menu1();
@@ -219,7 +231,6 @@ void main(void)
 				else if (exitchoice == 2)
 				{
 					printf("\nBye-Bye!\n");
-					printf("Press Enter to Exit.\n");
 					cpause();
 				}
 				break;
@@ -353,7 +364,6 @@ void AreaPF(void) //Confirmed
 
 	default: printf("\nINVAILD NUMBER!\n");
 		getchar();
-		getchar();
 		break;
 	}
 }
@@ -403,4 +413,48 @@ int menu3(void)
 	printf("\nChoice: ");
 	scanf_s("%d", &cho3);
 	return cho3;
+}
+
+void CornsProgram(void)
+{
+		/*Variable declaration*/
+		int choice;
+		double dmg, points;
+		/*Initialisation*/
+		printf("This program calculates the total amount of points acquired from a maximum level Archwitch.\n");
+		/*Menu for type of boss player has fought*/
+		printf("Enter type of witch you want to calculate:   [1]Archwitch   [2]FantoArchWitch\n");
+		scanf_s("%d", &choice);
+		switch (choice)
+		{
+		case 1:printf("Enter amount of damage done to the Archwitch:\n");
+			scanf_s("%lf", &dmg);
+			/*Domain of points*/
+			if (dmg < 0 || dmg > 1940498)
+			{
+				printf("Error.\n");
+			}
+			else
+			{
+				points = (dmg * 2400 / 940500) + 2400;
+				printf("Points received = %.0lf.\n", points);
+			}
+			break;
+		case 2:printf("Enter amount of damage done to the FantoArchwitch:\n");
+			scanf_s("%lf", &dmg);
+			/*Domain of points*/
+			if (dmg < 0 || dmg > 4499998)
+			{
+				printf("Error.\n");
+			}
+			else
+			{
+				points = (dmg * 10800 / 3500000) + 10800;
+				printf("Points received = %.0lf.\n", points);
+			}
+			break;
+		default: printf("Error.\n");
+			break;
+		}
+		cpause();
 }
